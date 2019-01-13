@@ -7,9 +7,10 @@ sudo ./server -port 2000 -root /tmp
 其中-port指定了控制连接的端口号，-root指定了将哪个文件夹用于客户端的根目录。然后进入client/src文件夹，按照client/doc中的说明运行客户端。
 # 代码说明
 以下列出核心代码的路径和功能。
+```
 .
 ├── client
-│   └── src
+│   └── src
 │       ├── client.py：实现ftp客户端的核心逻辑
 │       ├── cmd.py： ftp的命令行程序
 │       ├── gui.py： ftp的GUI程序
@@ -28,6 +29,7 @@ sudo ./server -port 2000 -root /tmp
 │       ├── util.c： 在实现handle.c时常用的函数库
 │       └── util.h：ftp服务器常用结构体和函数的声明
 └── udp
+```
 # 算法说明
 ## 断点续传算法
 为了实现断点续传，在服务器端增加了REST、APPE、STAT等命令。过程如下（只列出思路，忽略了文件大小的校验）。
